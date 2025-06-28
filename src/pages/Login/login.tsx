@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import {
-  IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
-  IonButton, IonInput, IonItem, IonToast
+  IonPage, IonContent, IonButton, IonInput, IonItem, IonToast
 } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import './login.css';
 
-// 👉 Interfaz que describe la estructura del JSON de respuesta
 interface LoginResponse {
   success: boolean;
   user_id: number;
@@ -27,7 +26,6 @@ const Login: React.FC = () => {
       });
 
       if (response.data && response.data.success) {
-        // 👇 Aseguramos que el ID se almacene como string
         localStorage.setItem('user_id', response.data.user_id.toString());
         history.push('/principal');
       }
@@ -39,24 +37,21 @@ const Login: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Iniciar Sesión</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent className="ion-padding" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
-        <div style={{ maxWidth: 350, margin: '0 auto', width: '100%' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: 32, color: '#3D6FA2' }}>Bienvenido</h2>
-          <IonItem>
+      <IonContent className="login-bg">
+        <div className="login-container">
+          <h2 className="login-title">Bienvenido</h2>
+          <IonItem className="login-item">
             <IonInput
+              className="login-input"
               value={usuario}
               onIonChange={e => setUsuario(e.detail.value!)}
               placeholder="Ingresa tu correo"
               clearInput
             />
           </IonItem>
-          <IonItem style={{ marginTop: 18 }}>
+          <IonItem className="login-item">
             <IonInput
+              className="login-input"
               type="password"
               value={contrasena}
               onIonChange={e => setContrasena(e.detail.value!)}
@@ -64,7 +59,7 @@ const Login: React.FC = () => {
               clearInput
             />
           </IonItem>
-          <IonButton expand="block" style={{ marginTop: 32, background: '#3D6FA2' }} onClick={handleLogin}>
+          <IonButton expand="block" className="login-btn" onClick={handleLogin}>
             Iniciar Sesión
           </IonButton>
         </div>

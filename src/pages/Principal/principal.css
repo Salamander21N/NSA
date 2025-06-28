@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Fondo general */
+.principal-bg {
+  --background: #DDF1DC;
+  background-color: #DDF1DC;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón naranja personalizado */
+.principal-btn {
+  --background: #FFC857;
+  --color: black;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+  width: 220px;
+  margin-bottom: 22px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: filter 0.2s ease;
+}
+
+.principal-btn:hover {
+  filter: brightness(0.95);
+}
+
+/* Nombre del usuario */
+.usuario-nombre {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2E2E2E;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Logo SVG centrado */
+.logo-container {
+  margin-top: 40px;
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Engranaje (posición) */
+.boton-configuracion {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 10;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
