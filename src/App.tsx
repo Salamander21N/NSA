@@ -8,8 +8,12 @@ import Register from './pages/Register/Register';
 import Login from './pages/Login/login';
 import Principal from './pages/Principal/principal';
 import Tienda from './pages/Tienda/Tienda';
+<<<<<<< HEAD
 import Configuracion from './pages/configuracion/configuracion';
 import Intro from './pages/intro'; // ✅ IMPORTACIÓN CORRECTA
+=======
+import Configuracion from './pages/Configuracion/configuracion';
+>>>>>>> ad9e1b9a82cd8fe5638b210e4c267a4e42192992
 
 /* Estilos de Ionic */
 import '@ionic/react/css/core.css';
@@ -63,6 +67,9 @@ const App: React.FC = () => (
         {/* 🔽 ESTE Redirect debe ser el último */}
         <Route exact path="/">
           <Redirect to="/intro" />
+        </Route>
+        <Route exact path="/configuracion">
+          <Configuracion />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

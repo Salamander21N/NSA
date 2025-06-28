@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.config-page {
+  --background: #DDF1DC;
+  background-color: #DDF1DC;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Etiquetas flotantes personalizadas */
+.config-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2E2E2E;
+  margin-bottom: 18px;
+}
+
+/* Inputs personalizados */
+.config-input ion-input {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Botones principales */
+.config-button {
+  --background: #FFC857;
+  --color: black;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+  margin-top: 32px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: filter 0.2s ease;
+}
+
+.config-button:hover {
+  filter: brightness(0.95);
+}
+
+/* Botón secundario */
+.config-button-secondary {
+  --background: #cccccc;
+  --color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+ion-item.config-input {
+  --background: transparent;
+  background-color: transparent;
+  margin-bottom: 24px;
+  --color: #000; /* Forza el color del texto a negro */
+}
+
+.config-input ion-input {
+  color: #000 !important; /* Asegura que lo escrito sea negro */
+}
+
