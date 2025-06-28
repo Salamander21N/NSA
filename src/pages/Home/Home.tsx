@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         <div className="center-content">
           Toca para Continuar
         </div>
-        <img src="/images/logo2.png" alt="Nutry Logo" className="logo2-img" />
+        <img src="/images/logo3.png" alt="Nutry Logo" className="logo3-img" />
       </IonContent>
     </IonPage>
   );

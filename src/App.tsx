@@ -7,6 +7,7 @@ import Menu from './pages/Menu';
 import Register from './pages/Register';
 import Login from './pages/Login/login';
 import Principal from './pages/Principal/principal';
+import Tienda from './pages/Tienda';
 
 /* Estilos de Ionic */
 import '@ionic/react/css/core.css';
@@ -46,6 +47,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/principal">
           <Principal />
+        </Route>
+        <Route exact path="/tienda">
+          <Tienda />
         </Route>
         <Route exact path="/">
           <Redirect to="/home" />

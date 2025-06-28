@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.tienda-bg {
+  --background: #1B4332;
+  background: #1B4332 !important;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.plan-img {
+  position: absolute;
+  width: 260px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.plan-img:hover {
+  transform: scale(1.05);
+}
+
+.plan-mensual {
+  top: 80px;
+  left: 40px;
+}
+
+.plan-semestral {
+  top: 280px;
+  left: 40px;
+}
+
+.plan-anual {
+  top: 480px;
+  left: 40px;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.input-blanco {
+  --background: transparent;
+  --color: white;
+  --placeholder-color: #fff;
+  --border-color: white;
+  border-bottom: 1px solid white;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.modal-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.modal-label {
+  color: black;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.modal-input {
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  color: black;
+  margin-bottom: 20px;
+}

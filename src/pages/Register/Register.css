@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .register-bg {
-  --background: #1B4332;
+  --background: #DDF1DC;
   position: relative;
   padding: 0;
 }
 
 .field-label {
   position: absolute;
-  color: white;
+  color: black; /* antes: white */
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
@@ -19,19 +19,19 @@
   height: 35px;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid white;
-  color: white;
+  border-bottom: 2px solid black; /* antes: white */
+  color: black; /* antes: white */
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   outline: none;
 }
 
-/* Estilo para selects de género y enfermedad */
 .select-black {
   color: black;
   background-color: white;
 }
 
+/* Botón */
 .menu-btn {
   position: absolute;
   background-color: #FFC857;
@@ -43,4 +43,16 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+/* Nuevos estilos para campos bloqueados */
+.blocked-label {
+  color: #888; /* gris oscuro para texto */
+}
+
+.blocked-field {
+  border-bottom: 2px solid #666 !important; /* línea gris oscura */
+  color: #888 !important;                  /* texto gris oscuro */
+  pointer-events: auto;                   /* permite clics */
+  cursor: pointer;
 }

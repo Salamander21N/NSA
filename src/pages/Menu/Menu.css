@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .menu-bg {
-  --background: #4CAF50;
+  --background: #DDF1DC;
   position: relative;
 }
 
-.logo2-img {
+.logo3-img {
   position: absolute;
   top: 10px;
-  left: 60px;
-  width: 270px;
+  left: 70px;
+  width: 250px;
   height: auto;
 }
 
@@ -25,7 +25,24 @@
   transition: background-color 0.2s ease;
 }
 
-/* Color al mantener presionado */
 .menu-btn:active {
   background-color: #EF4423;
+}
+
+.store-btn {
+  position: absolute;
+  background-color: #EF4423;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.store-btn:active {
+  background-color: #FFC857;
 }

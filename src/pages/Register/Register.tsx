@@ -1,7 +1,7 @@
 import { IonContent, IonPage } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
 import './Register.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Register: React.FC = () => {
   const history = useHistory();
@@ -13,11 +13,24 @@ const Register: React.FC = () => {
   const [enfermedad, setEnfermedad] = useState('');
   const [correo, setCorreo] = useState('');
   const [contrasena, setContrasena] = useState('');
+  const [peso, setPeso] = useState('');
+  const [altura, setAltura] = useState('');
+  const [objetivo, setObjetivo] = useState('');
+  const [alergia, setAlergia] = useState('');
+  const [bloqueado, setBloqueado] = useState(true);
+
+  useEffect(() => {
+    const pagoExitoso = localStorage.getItem('pago_exitoso') === 'true';
+    setBloqueado(!pagoExitoso);
+  }, []);
+
+  const handleBlockedClick = () => {
+    history.push('/tienda');
+  };
 
   const handleRegisterClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const button = e.currentTarget;
 
-    // Validación de campos vacíos
     if (
       !nombre.trim() ||
       !fechaNacimiento ||
@@ -36,13 +49,13 @@ const Register: React.FC = () => {
 
     setTimeout(() => {
       button.style.backgroundColor = originalColor;
-      history.replace('/menu'); // NO deja volver atrás
+      history.replace('/menu');
     }, 200);
   };
 
   return (
     <IonPage>
-      <IonContent fullscreen className="register-bg">
+      <IonContent fullscreen className="register-bg" scrollY={true}>
         <label className="field-label" style={{ top: '40px', left: '30px' }}>Nombre</label>
         <input
           type="text"
@@ -114,9 +127,53 @@ const Register: React.FC = () => {
           onChange={(e) => setContrasena(e.target.value)}
         />
 
+        <label className="field-label" style={{ top: '520px', left: '30px' }}>Peso</label>
+        <input
+          type="number"
+          className={`input-field ${bloqueado ? 'blocked-field' : ''}`}
+          style={{ top: '550px', left: '30px' }}
+          value={peso}
+          onChange={(e) => setPeso(e.target.value)}
+          onClick={bloqueado ? handleBlockedClick : undefined}
+          readOnly={bloqueado}
+        />
+
+        <label className="field-label" style={{ top: '600px', left: '30px' }}>Altura</label>
+        <input
+          type="number"
+          className={`input-field ${bloqueado ? 'blocked-field' : ''}`}
+          style={{ top: '630px', left: '30px' }}
+          value={altura}
+          onChange={(e) => setAltura(e.target.value)}
+          onClick={bloqueado ? handleBlockedClick : undefined}
+          readOnly={bloqueado}
+        />
+
+        <label className="field-label" style={{ top: '680px', left: '30px' }}>Objetivo</label>
+        <input
+          type="text"
+          className={`input-field ${bloqueado ? 'blocked-field' : ''}`}
+          style={{ top: '710px', left: '30px' }}
+          value={objetivo}
+          onChange={(e) => setObjetivo(e.target.value)}
+          onClick={bloqueado ? handleBlockedClick : undefined}
+          readOnly={bloqueado}
+        />
+
+        <label className="field-label" style={{ top: '760px', left: '30px' }}>Alergia</label>
+        <input
+          type="text"
+          className={`input-field ${bloqueado ? 'blocked-field' : ''}`}
+          style={{ top: '790px', left: '30px' }}
+          value={alergia}
+          onChange={(e) => setAlergia(e.target.value)}
+          onClick={bloqueado ? handleBlockedClick : undefined}
+          readOnly={bloqueado}
+        />
+
         <button
           className="menu-btn"
-          style={{ top: '540px', left: '60px', width: '260px', height: '55px' }}
+          style={{ top: '850px', left: '60px', width: '260px', height: '55px' }}
           onClick={handleRegisterClick}
         >
           Registrarse

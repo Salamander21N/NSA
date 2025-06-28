@@ -11,6 +11,7 @@ import {
   IonLabel
 } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
+import './login.css'; // al inicio del archivo
 
 const Login: React.FC = () => {
   const [usuario, setUsuario] = useState('');
@@ -24,37 +25,44 @@ const Login: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Iniciar Sesión</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent className="ion-padding" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
-        <div style={{ maxWidth: 350, margin: '0 auto', width: '100%' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: 32, color: '#3D6FA2' }}>Bienvenido</h2>
-          <IonItem>
-            <IonInput
-              value={usuario}
-              onIonChange={e => setUsuario(e.detail.value!)}
-              placeholder="Ingresa tu usuario"
-              clearInput
-            />
-          </IonItem>
-          <IonItem style={{ marginTop: 18 }}>
-            <IonInput
-              type="password"
-              value={contrasena}
-              onIonChange={e => setContrasena(e.detail.value!)}
-              placeholder="Ingresa tu contraseña"
-              clearInput
-            />
-          </IonItem>
-          <IonButton expand="block" style={{ marginTop: 32, background: '#3D6FA2' }} onClick={handleLogin}>
-            Iniciar Sesión
-          </IonButton>
-        </div>
-      </IonContent>
-    </IonPage>
+  <IonHeader>
+    <IonToolbar>
+      <IonTitle>Iniciar Sesión</IonTitle>
+    </IonToolbar>
+  </IonHeader>
+
+  <IonContent fullscreen className="login-bg">
+    <div style={{ maxWidth: 350, margin: '0 auto', width: '100%' }}>
+      <h2 className="login-title">Bienvenido</h2>
+
+      <IonItem lines="full">
+        <IonInput
+          className="login-input"
+          value={usuario}
+          onIonChange={e => setUsuario(e.detail.value!)}
+          placeholder="Ingresa tu usuario"
+          clearInput
+        />
+      </IonItem>
+
+      <IonItem lines="full" style={{ marginTop: 18 }}>
+        <IonInput
+          className="login-input"
+          type="password"
+          value={contrasena}
+          onIonChange={e => setContrasena(e.detail.value!)}
+          placeholder="Ingresa tu contraseña"
+          clearInput
+        />
+      </IonItem>
+
+      <IonButton expand="block" style={{ marginTop: 32, background: '#3D6FA2' }} onClick={handleLogin}>
+        Iniciar Sesión
+      </IonButton>
+    </div>
+  </IonContent>
+</IonPage>
+
   );
 };
 

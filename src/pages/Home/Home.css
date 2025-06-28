@@ -1,5 +1,5 @@
 .home-bg {
-  --background: #4CAF50;
+  --background: #DDF1DC;
   height: 100%;
   position: relative;
   cursor: pointer;
@@ -14,9 +14,9 @@
   font-weight: bold;
 }
 
-.logo2-img {
+.logo3-img {
   position: absolute;
-  top: 40px;     /* posición vertical desde arriba */
+  top: 20px;     /* posición vertical desde arriba */
   left: 60px;    /* posición horizontal desde la izquierda */
   width: 270px;  /* ancho en píxeles */
   height: auto;  /* para mantener proporción */
