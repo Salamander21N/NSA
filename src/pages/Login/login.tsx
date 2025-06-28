@@ -25,12 +25,6 @@ const Login: React.FC = () => {
 
   return (
     <IonPage>
-  <IonHeader>
-    <IonToolbar>
-      <IonTitle>Iniciar Sesión</IonTitle>
-    </IonToolbar>
-  </IonHeader>
-
   <IonContent fullscreen className="login-bg">
     <div style={{ maxWidth: 350, margin: '0 auto', width: '100%' }}>
       <h2 className="login-title">Bienvenido</h2>

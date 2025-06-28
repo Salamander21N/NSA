@@ -9,7 +9,7 @@
   position: absolute;
   top: 55%; /* cambia este valor para mover verticalmente */
   left: 15%; /* cambia este valor para mover horizontalmente */
-  color: white;
+  color: #2E2E2E ;
   font-size: 1.8rem;
   font-weight: bold;
 }

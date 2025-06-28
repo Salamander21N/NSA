@@ -2,12 +2,12 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
-import Home from './pages/Home';
-import Menu from './pages/Menu';
-import Register from './pages/Register';
+import Home from './pages/Home/Home';
+import Menu from './pages/Menu/Menu';
+import Register from './pages/Register/Register';
 import Login from './pages/Login/login';
 import Principal from './pages/Principal/principal';
-import Tienda from './pages/Tienda';
+import Tienda from './pages/Tienda/Tienda';
 
 /* Estilos de Ionic */
 import '@ionic/react/css/core.css';
