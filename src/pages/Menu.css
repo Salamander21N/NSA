@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.menu-bg {
+  --background: #4CAF50;
+  position: relative;
+}
+
+.logo2-img {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  width: 270px;
+  height: auto;
+}
+
+.menu-btn {
+  position: absolute;
+  background-color: #FFC857;
+  color: #000;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Color al mantener presionado */
+.menu-btn:active {
+  background-color: #EF4423;
+}

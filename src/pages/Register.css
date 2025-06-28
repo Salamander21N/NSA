@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.register-bg {
+  --background: #1B4332;
+  position: relative;
+  padding: 0;
+}
+
+.field-label {
+  position: absolute;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.input-field {
+  position: absolute;
+  width: 300px;
+  height: 35px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  outline: none;
+}
+
+/* Estilo para selects de género y enfermedad */
+.select-black {
+  color: black;
+  background-color: white;
+}
+
+.menu-btn {
+  position: absolute;
+  background-color: #FFC857;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

@@ -1,0 +1,23 @@
+.home-bg {
+  --background: #4CAF50;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.center-content {
+  position: absolute;
+  top: 55%; /* cambia este valor para mover verticalmente */
+  left: 15%; /* cambia este valor para mover horizontalmente */
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.logo2-img {
+  position: absolute;
+  top: 40px;     /* posición vertical desde arriba */
+  left: 60px;    /* posición horizontal desde la izquierda */
+  width: 270px;  /* ancho en píxeles */
+  height: auto;  /* para mantener proporción */
+}
