@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .tienda-bg {
-  --background: #1B4332;
-  background: #1B4332 !important;
+  --background: #DDF1DC;
+  background: #DDF1DC !important;
   position: relative;
   height: 100%;
   width: 100%;

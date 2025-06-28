@@ -16,11 +16,35 @@
 }
 
 .login-input {
-  color: white !important; /* antes: black */
+  color: black !important;
+  background-color: white !important; /* gris oscuro suave */
   font-family: 'Open Sans', sans-serif;
+  border-radius: 6px;
+  padding-left: 10px;
 }
 
 .ion-toolbar {
   --background: #DDF1DC;
   --color: black;
+}
+
+.login-btn {
+  background-color: #FFC857 !important;
+  color: black !important;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #e6b14a !important;
+}
+
+ion-item {
+  --background: transparent;
+  --highlight-color-focused: #FFC857;
+  --border-color: transparent;
+  border: none;
 }

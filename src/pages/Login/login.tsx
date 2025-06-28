@@ -50,9 +50,17 @@ const Login: React.FC = () => {
         />
       </IonItem>
 
-      <IonButton expand="block" style={{ marginTop: 32, background: '#3D6FA2' }} onClick={handleLogin}>
+      <IonButton
+        expand="block"
+        className="login-btn"
+        color="none" /* 🔴 MUY IMPORTANTE */
+        style={{ marginTop: 32 }}
+        onClick={handleLogin}
+      >
         Iniciar Sesión
       </IonButton>
+
+
     </div>
   </IonContent>
 </IonPage>
