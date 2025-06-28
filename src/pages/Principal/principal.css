@@ -1,0 +1,50 @@
+.settings-button {
+  position: absolute;
+  background-color: #3D6FA2;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  top: 30px;    /* ← Cambia esta coordenada vertical */
+  right: 30px;  /* ← Cambia esta coordenada horizontal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.settings-button:hover {
+  transform: scale(1.1);
+}
+
+.settings-icon {
+  color: white;
+  font-size: 24px;
+}
+
+/* src/pages/Principal.css */
+
+.settings-button {
+  position: absolute;
+  top: 20px; /* Cambia esta coordenada para mover el botón */
+  right: 20px; /* Cambia esta coordenada para mover el botón */
+  width: 48px;  /* Cambia el tamaño aquí */
+  height: 48px;
+  border-radius: 50%;
+  background-color: #1A3C5E;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.settings-icon {
+  font-size: 22px;
+}
