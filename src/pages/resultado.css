@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.login-bg {
+  --background: #DDF1DC;
+  background-color: #DDF1DC;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+}
+
+.login-input {
+  color: white !important; /* antes: black */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.ion-toolbar {
+  --background: #DDF1DC;
+  --color: black;
+}
